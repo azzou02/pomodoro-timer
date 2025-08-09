@@ -1,0 +1,40 @@
+.mode-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    margin: 16px 0;
+}
+  
+.mode-button {
+    display: flex;
+    width: 160px;
+    height: 45px;
+    padding: 1px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  
+    border-radius: 35px;
+    font-size: 18px;
+    font-weight: 600;
+    color:#FF1E0C;
+    cursor: pointer;
+    transition: background 0.2s ease, border 0.2s ease;
+    border: 3px solid var(--button, #FFCB46);
+}
+
+.mode-button.unselected {
+    color:#FFCB46;
+    background: var(--unselected-button, #FF1E0C);
+}
+
+.mode-button.active {
+    color:#FF1E0C;
+    background: var(--button, #FFCB46);
+}
+
+
+  
+  
+  

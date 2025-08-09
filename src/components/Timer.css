@@ -1,0 +1,127 @@
+.main-timer-layout {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap; 
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: -4rem;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+  
+.tomato-container {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding-left: 5px;
+}
+  
+.tomato-image {
+    width: 70vw;
+    max-width: 680px;
+    height: auto;
+    display: block;
+    max-height: 70vh;
+}
+  
+.timer-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    font-size: clamp(32px, 11vw, 200px);
+    transform: translate(-50%, -50%);
+    color: #FFCB46;
+    pointer-events: none;
+}
+
+.tomato-with-bubble {
+    position: relative;
+    display: inline-block;
+}
+
+.speech-bubble {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 2px solid #FF1E0C;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FF1E0C;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.speech-bubble.show {
+    opacity: 1;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #FF1E0C;
+    z-index: -1;
+}
+
+.tomato-image-container {
+    align-self: flex-end;
+    width: 22vw;
+    max-width: 360px;
+    height: 320px;
+    margin-left: 2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: visible;
+}
+
+.side-tomato {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+.side-tomato.yawn {
+    width: 130%;
+    transform: translateY(65px);
+    object-position: center;
+}
+  
+.button-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-top: 1rem;
+    margin-left: 5rem;
+  }
+  
